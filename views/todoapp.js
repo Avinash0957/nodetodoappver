@@ -7,7 +7,7 @@
                     id : todoid,
                     status : 1
                 }
-                const response = await fetch(`${window.location.origin}/updatetodos`,{
+                const response = await fetch(`https://nodetodoappver.vercel.app/updatetodos`,{
                     method : 'POST',
                     headers : {
                         'content-type' : 'application/json'
@@ -65,7 +65,7 @@
                     id : todoid,
                     status : 0
                 }
-                const response = await fetch(`${window.location.origin}/updatetodos`,{
+                const response = await fetch(`https://nodetodoappver.vercel.app/updatetodos`,{
                     method : 'POST',
                     headers : {
                         'content-type' : 'application/json'
@@ -120,7 +120,7 @@
            }
         }
       async function loadtodos(){
-           const response = await fetch(`${window.location.origin}/all-todo`);
+           const response = await fetch(`https://nodetodoappver.vercel.app/all-todo`);
            const data = await response.json();
            const todosdata = data.Data;
            let htmlcode = ``;
@@ -144,7 +144,7 @@
         
         async function allcounts(){
             
-           const response = await fetch(`${window.location.origin}/all-todo-counts`);
+           const response = await fetch(`https://nodetodoappver.vercel.app/all-todo-counts`);
            const data = await response.json();
            const Totaltask = data.Data[0].Totaltask;
            const Completedtask = data.Data[0].Completedtask;
@@ -159,7 +159,7 @@
                  const payload = {
                     id : todoid
                 }
-                const response = await fetch(`${window.location.origin}/deletetodos`,{
+                const response = await fetch(`https://nodetodoappver.vercel.app/deletetodos`,{
                     method : 'POST',
                     headers : {
                         'content-type' : 'application/json'
@@ -234,7 +234,7 @@
                  const payload = {
                     title : $("#todotitle").val()
                 }
-                const response = await fetch(`${window.location.origin}/addtodos`,{
+                const response = await fetch(`https://nodetodoappver.vercel.app/addtodos`,{
                     method : 'POST',
                     headers : {
                         'content-type' : 'application/json'
